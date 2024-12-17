@@ -19,8 +19,10 @@ plot(log_inv_LC50 ~ logKow, df)
 
 n_compo = 100 # nombre de composés
 logKow = rnorm(n_compo, 2, 1)  # vecteur de Kow
-b0 = -4 # Ordonnée à l'origine
-b1 = .9 # Pente
+# b0 = -4 # Ordonnée à l'origine
+# b1 = .9 # Pente
+b0 = -3 # Ordonnée à l'origine
+b1 = .7 # Pente
 sigma = .25 # variance résiduelle
 
 log_inv_LC50 = rnorm(n_compo, b0 + b1 * logKow, sigma)
